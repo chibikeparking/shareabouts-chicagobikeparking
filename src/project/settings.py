@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     # Project apps
     'sa_web',
     'proxy',
+    'chicago',
 )
 
 # Use a test runner that does not use a database.
