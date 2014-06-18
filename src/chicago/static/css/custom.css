@@ -115,11 +115,21 @@ textarea:focus {
 }
 #site-title a:link,
 #site-title a:visited {
-/*  font-size: 2em;*/
   color: #fff;
 }
 #site-title a:hover {
   color: #fff;
+}
+#cdot-logo {
+  float: left;
+  height: 1.125em;
+  margin: 0.125em 0.25em 0 0;
+}
+.site-name {
+  font-size: 0.6em;
+  float: left;
+  width: 7.5em;
+  line-height: 1.2;
 }
 
 /* Navigation Button */
@@ -149,6 +159,10 @@ a.logout-btn {
 #add-place-btn-container {
   background: #E3E3E3;
   border-bottom: 1px solid #A9A9A9;
+}
+#add-place {
+  text-transform: none;
+  font-weight: 800;
 }
 
 /* Drag Marker Instructions (for adding a new place) */
@@ -377,6 +391,16 @@ a.shareabouts-logo:hover {
     text-shadow: -0.25em 0 0 #0f3647, -0.25em -1px 0 #0f3647, -0.25em 1px 0 #0f3647, -0.375em 0 0 #fff;
   }
 
+}
+
+@media only screen and (min-width: 70em) {
+  .site-name {
+    font-size: 0.75em;
+    float: left;
+    width: auto;
+    line-height: 1.75;
+    padding: 0 0.25em;
+  }
 }
 
 @media only screen and (min-width: 80em) {
