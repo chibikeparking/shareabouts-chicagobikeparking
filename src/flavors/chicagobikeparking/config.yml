@@ -67,16 +67,11 @@ place:
   show_list_button_label: _(List All Requests)
   show_map_button_label: _(Show the Map)
   action_text: _(requested)
-  # title: _(Tell us why you want bike parking...)
+  title: _(My Request)
   action_text: _(requested)
   anonymous_name: _(Someone)
-  submit_button_label: _(Request)
+  submit_button_label: _(Submit Request)
   items:
-    - type: hidden
-      name: location_type
-      attrs:
-      - key: value
-        value: bikeparking
     - prompt: _(Your Name)
       type: text
       name: submitter_name
@@ -111,6 +106,11 @@ place:
       attrs:
         - key: placeholder
           value: _(Description...)
+    - type: hidden
+      name: location_type
+      attrs:
+      - key: value
+        value: bikeparking
 
 survey:
   submission_type: comments
