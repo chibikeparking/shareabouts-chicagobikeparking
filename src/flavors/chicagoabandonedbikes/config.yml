@@ -110,6 +110,14 @@ place:
       attrs:
       - key: value
         value: abandonedbike
+    - prompt: _(Share a photograph)
+      inputfile_label: _(Add)
+      type: file
+      name: my_image
+      optional: true
+      attrs:
+        - key: accept
+          value: image/*
 
 survey:
   submission_type: comments
