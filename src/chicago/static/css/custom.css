@@ -276,7 +276,8 @@ a.close-btn:hover {
 .place-status-container .place-status {
   display: none;
 }
-.place-status-container.bikeparking .place-status.requested {
+.place-status-container.bikeparking .place-status.requested,
+.place-status-container.abandonedbike .place-status.reported {
   display: block;
   background-color: #26A0DA;
 }
@@ -288,11 +289,16 @@ a.close-btn:hover {
   display: block;
   background-color: #F30000;
 }
+.place-status-container.abandonedbikeresolved .place-status.resolved {
+  display: block;
+  background-color: #A9A9A9;
+}
 
-.place-status-container.bikeparkingrejected + .promotion {
+.promotion {
   position: relative;
 }
-.place-status-container.bikeparkingrejected + .promotion .social:after {
+.place-status-container.bikeparkingrejected + .promotion .social:after,
+.place-status-container.abandonedbikeresolved + .promotion .social:after {
   content: '';
   position: absolute;
   top: 0;

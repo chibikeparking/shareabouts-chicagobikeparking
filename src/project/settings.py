@@ -148,9 +148,9 @@ INSTALLED_APPS = (
     'compressor',
 
     # Project apps
+    'chicago',
     'sa_web',
     'proxy',
-    'chicago',
 )
 
 # Use a test runner that does not use a database.
