@@ -139,25 +139,25 @@ place:
       attrs:
         - key: placeholder
           value: _(Description...)
-    - prompt: _(Location Type)
-      type: select
-      options:
-        - label: _(Choose One)
-          value: ''
-        - label: _(Requested)
-          value: bikeparking
-        - label: _(Rejected)
-          value: bikeparkingrejected
-        - label: _(Approved)
-          value: bikeparkingapproved
-      name: location_type
-      attrs:
-        - key: required
-    # - type: hidden
+    # - prompt: _(Location Type)
+    #   type: select
+    #   options:
+    #     - label: _(Choose One)
+    #       value: ''
+    #     - label: _(Requested)
+    #       value: bikeparking
+    #     - label: _(Rejected)
+    #       value: bikeparkingrejected
+    #     - label: _(Approved)
+    #       value: bikeparkingapproved
     #   name: location_type
     #   attrs:
-    #   - key: value
-    #     value: bikeparking
+    #     - key: required
+    - type: hidden
+      name: location_type
+      attrs:
+      - key: value
+        value: bikeparking
 
 survey:
   submission_type: comments

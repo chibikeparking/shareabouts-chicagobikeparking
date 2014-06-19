@@ -122,23 +122,23 @@ place:
       attrs:
         - key: placeholder
           value: _(Description...)
-    # - type: hidden
-    #   name: location_type
-    #   attrs:
-    #   - key: value
-    #     value: abandonedbike
-    - prompt: _(Location Type)
-      type: select
-      options:
-        - label: _(Choose One)
-          value: ''
-        - label: _(Abandoned)
-          value: abandonedbike
-        - label: _(Resolved)
-          value: abandonedbikeresolved
+    - type: hidden
       name: location_type
       attrs:
-        - key: required
+      - key: value
+        value: abandonedbike
+    # - prompt: _(Location Type)
+    #   type: select
+    #   options:
+    #     - label: _(Choose One)
+    #       value: ''
+    #     - label: _(Abandoned)
+    #       value: abandonedbike
+    #     - label: _(Resolved)
+    #       value: abandonedbikeresolved
+    #   name: location_type
+    #   attrs:
+    #     - key: required
     - prompt: _(Share a photograph)
       inputfile_label: _(Add)
       type: file
