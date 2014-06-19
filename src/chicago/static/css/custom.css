@@ -112,6 +112,7 @@ textarea:focus {
   font-family: 'Open Sans', sans-serif, "Helvetica Neue", Arial, Helvetica, serif;
   font-weight: 800;
   text-shadow: none;
+  float: left;
 }
 #site-title a:link,
 #site-title a:visited {
@@ -121,15 +122,17 @@ textarea:focus {
   color: #fff;
 }
 #cdot-logo {
-  float: left;
-  height: 1.125em;
-  margin: 0.125em 0.25em 0 0;
+  display: block;
+  height: 0.75em;
+  margin: 0.2em 0.25em 0 0;
 }
 .site-name {
-  font-size: 0.6em;
+  font-size: 0.45em;
   float: left;
-  width: 8.75em;
   line-height: 1.2;
+  background-color: #26A0DA;
+  position: relative;
+  top: -0.6em;
 }
 
 /* Navigation Button */
@@ -339,6 +342,19 @@ a.shareabouts-logo:hover {
 }
 
 @media only screen and (min-width: 60em) {
+  #cdot-logo {
+    float: left;
+    height: 1.125em;
+    margin-top: 0.125em;
+  }
+  .site-name {
+    font-size: 0.6em;
+    float: left;
+    width: 9em;
+    line-height: 1.2;
+    top: 0;
+    background-color: transparent;
+  }
   .access li:hover > ul,
   .access li:hover > form > ul {
     background: #21759b;
@@ -396,7 +412,6 @@ a.shareabouts-logo:hover {
 @media only screen and (min-width: 70em) {
   .site-name {
     font-size: 0.75em;
-    float: left;
     width: auto;
     line-height: 1.75;
     padding: 0 0.25em;

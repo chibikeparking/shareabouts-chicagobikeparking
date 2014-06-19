@@ -1,9 +1,9 @@
 # Settings for the app
 app:
   # HTML Title
-  title: CDOT | Report an Abandoned Bike
+  title: CDOT | Report Abandoned Bikes
   # Header name
-  name: Report an Abandoned Bike
+  name: Report Abandoned Bikes
   # Meta description that will show up in Google search results
   meta_description: _()
   # Meta author that will show up in Google search results
