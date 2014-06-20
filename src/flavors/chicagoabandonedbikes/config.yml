@@ -41,7 +41,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "abandonedbike" && {{layer.focused}}'
         icon:
-          iconUrl: /static/css/images/marker-bike-lock-abandoned.png
+          iconUrl: /static/css/images/marker-bike-abandoned.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [62, 81]
           shadowSize: [95, 81]
@@ -58,7 +58,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "abandonedbikeresolved" && {{layer.focused}}'
         icon:
-          iconUrl: /static/css/images/marker-bike-lock-resolved.png
+          iconUrl: /static/css/images/marker-bike-resolved.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [62, 81]
           shadowSize: [95, 81]
