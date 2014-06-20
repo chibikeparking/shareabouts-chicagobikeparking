@@ -333,6 +333,12 @@ a.close-btn:hover {
   font-weight: 700;
 }
 
+.site-legend {
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  box-shadow: inset 0 -1px 0 #A9A9A9;
+}
+
 
 /* =List View
 -------------------------------------------------------------- */
