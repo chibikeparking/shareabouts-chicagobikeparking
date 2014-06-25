@@ -185,7 +185,7 @@ pages:
   - title: _(About)
     slug: about
     name: overview
-    # start_page: true
+    start_page: true
 
 notifications:
   on_new_place: true
