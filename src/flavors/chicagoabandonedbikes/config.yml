@@ -93,7 +93,7 @@ place:
   anonymous_name: _(Someone)
   submit_button_label: _(Submit Report)
 
-  location_item_name: name
+  location_item_name: location
 
   items:
     - prompt: _(Your Name)
@@ -117,12 +117,12 @@ place:
     - prompt: _(Location Name)
       type: text
       name: name
+      optional: true
       attrs:
         - key: placeholder
           value: _(Location Name)
         - key: size
           value: 30
-        - key: required
     - prompt: _(Description)
       type: textarea
       name: description
