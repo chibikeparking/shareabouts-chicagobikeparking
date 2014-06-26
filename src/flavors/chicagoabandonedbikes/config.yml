@@ -5,7 +5,7 @@ app:
   # Header name
   name: Report Abandoned Bikes
   # Meta description that will show up in Google search results
-  meta_description: _()
+  meta_description: _(Report abandoned bikes in Chicago)
   # Meta author that will show up in Google search results
   meta_author: Chicago Department of Transportation
 
