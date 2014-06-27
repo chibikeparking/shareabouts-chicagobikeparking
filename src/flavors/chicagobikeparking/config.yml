@@ -148,6 +148,11 @@ place:
       attrs:
         - key: placeholder
           value: _(Description...)
+    - type: hidden
+      name: location_type
+      attrs:
+      - key: value
+        value: bikeparking
     # - prompt: _(Location Type)
     #   type: select
     #   options:
@@ -162,11 +167,14 @@ place:
     #   name: location_type
     #   attrs:
     #     - key: required
-    - type: hidden
-      name: location_type
+    - prompt: _(Share a photograph)
+      inputfile_label: _(Add)
+      type: file
+      name: my_image
+      optional: true
       attrs:
-      - key: value
-        value: bikeparking
+        - key: accept
+          value: image/*
 
 survey:
   submission_type: comments
