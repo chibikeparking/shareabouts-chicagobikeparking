@@ -378,6 +378,30 @@ a.close-btn:hover {
 }
 
 
+/* =Geocoding
+-------------------------------------------------------------- */
+
+#geocode-address-bar {
+  background-color: #21759b;
+}
+input.geocode-address-field {
+  border-width: 0;
+  background-color: #1B6080;
+  color: #fff;
+}
+#geocode-address-bar .error {
+  line-height: 1.875;
+  background-color: #F30000;
+  box-shadow: 2px 2px 0 #F30000, 2px -2px 0 #F30000, -2px 2px 0 #F30000, -2px -2px 0 #F30000;
+}
+#geocode-address-bar .error + form {
+  box-shadow: 2px 2px 0 #F30000, 2px -2px 0 #F30000, -2px 2px 0 #F30000, -2px -2px 0 #F30000;
+}
+#geocode-address-bar .error.is-hidden + form {
+  box-shadow: none;
+}
+
+
 /* =Footer
 -------------------------------------------------------------- */
 
