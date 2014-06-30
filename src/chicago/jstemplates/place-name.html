@@ -1,0 +1,7 @@
+{{#if name }}
+  <span class="place-name">{{ name }}</span>
+{{^}}
+  {{#if location }}
+    <span class="place-name">{{>location-string location }}</span>
+  {{/if }}
+{{/if }}
