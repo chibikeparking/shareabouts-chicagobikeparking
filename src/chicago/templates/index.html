@@ -81,5 +81,22 @@ Shareabouts.PlaceFormView.prototype.setLocation = function(locationData) {
 
   $approxAddress.html('<span class="address-label">Approximate location:</span> ' + Handlebars.templates['location-string'](locationData));
 }
+
+// ========================================
+// Custom helpers
+
+Handlebars.registerHelper('isAbandonedBike', function(options) {
+  return (
+    this.location_type === 'abandonedbike' ||
+    this.location_type === 'abandonedbikeresolved') ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('isBikeParkingRequest', function(options) {
+  return (
+    this.location_type === 'bikeparking' ||
+    this.location_type === 'bikeparkingrejected' ||
+    this.location_type === 'bikeparkingapproved') ? options.fn(this) : options.inverse(this);
+});
+
 </script>
 {% endblock %}
