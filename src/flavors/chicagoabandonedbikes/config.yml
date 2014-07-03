@@ -44,6 +44,20 @@ place_types:
   abandonedbike:
     label: _(Abandoned Bike)
     rules:
+      - condition: '"{{location_type}}" === "abandonedbike" && {{layer.focused}} && "{{status}}" === "Resolved"'
+        icon:
+          iconUrl: /static/css/images/marker-bike-resolved.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [62, 81]
+          shadowSize: [95, 81]
+          iconAnchor: [31, 81]
+
+      - condition: '"{{location_type}}" === "abandonedbike" && "{{status}}" === "Resolved"'
+        icon:
+          iconUrl: /static/css/images/marker-dot-resolved.png
+          iconSize: [10, 10]
+          iconAnchor: [5, 5]
+
       - condition: '"{{location_type}}" === "abandonedbike" && {{layer.focused}}'
         icon:
           iconUrl: /static/css/images/marker-bike-abandoned.png
@@ -58,22 +72,6 @@ place_types:
           iconSize: [18, 18]
           iconAnchor: [9, 9]
 
-  abandonedbikeresolved:
-    label: _(Resolved Bike)
-    rules:
-      - condition: '"{{location_type}}" === "abandonedbikeresolved" && {{layer.focused}}'
-        icon:
-          iconUrl: /static/css/images/marker-bike-resolved.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [62, 81]
-          shadowSize: [95, 81]
-          iconAnchor: [31, 81]
-
-      - condition: '"{{location_type}}" === "abandonedbikeresolved"'
-        icon:
-          iconUrl: /static/css/images/marker-dot-resolved.png
-          iconSize: [10, 10]
-          iconAnchor: [5, 5]
 
 
 activity:
