@@ -1,4 +1,4 @@
-<div class="place-status-container {{ location_type }}">
+<div class="place-status-container {{ location_type }} {{#if status}} {{ status }} {{^}} new {{/if}}">
   <div class="place-status requested">
     Status: <strong>Requested</strong> <small class="nobreak">(Not Inspected)</small>
   </div>

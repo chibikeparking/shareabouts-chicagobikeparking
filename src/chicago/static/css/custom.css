@@ -286,20 +286,20 @@ a.close-btn:hover {
 .place-status-container .place-status {
   display: none;
 }
-.place-status-container.bikeparking .place-status.requested,
-.place-status-container.abandonedbike .place-status.reported {
+.place-status-container.bikeparking.new .place-status.requested,
+.place-status-container.abandonedbike.new .place-status.reported {
   display: block;
   background-color: #26A0DA;
 }
-.place-status-container.bikeparkingapproved .place-status.approved {
+.place-status-container.bikeparking.Approved .place-status.approved {
   display: block;
   background-color: #8bc53f;
 }
-.place-status-container.bikeparkingrejected .place-status.rejected {
+.place-status-container.bikeparking.Rejected .place-status.rejected {
   display: block;
   background-color: #F30000;
 }
-.place-status-container.abandonedbikeresolved .place-status.resolved {
+.place-status-container.abandonedbike.Resolved .place-status.resolved {
   display: block;
   background-color: #A9A9A9;
 }
@@ -307,8 +307,8 @@ a.close-btn:hover {
 .promotion {
   position: relative;
 }
-.place-status-container.bikeparkingrejected + .promotion .social:after,
-.place-status-container.abandonedbikeresolved + .promotion .social:after {
+.place-status-container.rejected + .promotion .social:after,
+.place-status-container.resolved + .promotion .social:after {
   content: '';
   position: absolute;
   top: 0;
