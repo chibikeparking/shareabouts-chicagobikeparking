@@ -45,6 +45,59 @@ place_types:
   bikeparking:
     label: _(Bike Parking)
     rules:
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Rejected" && {{layer.focused}}'
+        icon:
+          iconUrl: /static/css/images/marker-bike-lock-rejected.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [62, 81]
+          shadowSize: [95, 81]
+          iconAnchor: [31, 81]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Rejected"'
+        icon:
+          iconUrl: /static/css/images/marker-dot-rejected.png
+          iconSize: [10, 10]
+          iconAnchor: [5, 5]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Approved" && {{layer.focused}}'
+        icon:
+          iconUrl: /static/css/images/marker-bike-lock-approved.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [62, 81]
+          shadowSize: [95, 81]
+          iconAnchor: [31, 81]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Approved"'
+        icon:
+          iconUrl: /static/css/images/marker-dot-approved.png
+          iconSize: [18, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Existing" && {{map.zoom}} < 13'
+        style:
+          color: '#3bb3c1'
+          radius: 1
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Existing" && {{map.zoom}} < 15'
+        style:
+          color: '#3bb3c1'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Existing"'
+        style:
+          color: '#3bb3c1'
+          radius: 4
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
       - condition: '"{{location_type}}" === "bikeparking" && {{layer.focused}}'
         icon:
           iconUrl: /static/css/images/marker-bike-lock.png
@@ -59,39 +112,6 @@ place_types:
           iconSize: [18, 18]
           iconAnchor: [9, 9]
 
-  bikeparkingrejected:
-    label: _(Bike Parking)
-    rules:
-      - condition: '"{{location_type}}" === "bikeparkingrejected" && {{layer.focused}}'
-        icon:
-          iconUrl: /static/css/images/marker-bike-lock-rejected.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [62, 81]
-          shadowSize: [95, 81]
-          iconAnchor: [31, 81]
-
-      - condition: '"{{location_type}}" === "bikeparkingrejected"'
-        icon:
-          iconUrl: /static/css/images/marker-dot-rejected.png
-          iconSize: [10, 10]
-          iconAnchor: [5, 5]
-
-  bikeparkingapproved:
-    label: _(Bike Parking)
-    rules:
-      - condition: '"{{location_type}}" === "bikeparkingapproved" && {{layer.focused}}'
-        icon:
-          iconUrl: /static/css/images/marker-bike-lock-approved.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [62, 81]
-          shadowSize: [95, 81]
-          iconAnchor: [31, 81]
-
-      - condition: '"{{location_type}}" === "bikeparkingapproved"'
-        icon:
-          iconUrl: /static/css/images/marker-dot-approved.png
-          iconSize: [18, 18]
-          iconAnchor: [9, 9]
 
 
 activity:
@@ -153,6 +173,7 @@ place:
       attrs:
       - key: value
         value: bikeparking
+
     # - prompt: _(Location Type)
     #   type: select
     #   options:
