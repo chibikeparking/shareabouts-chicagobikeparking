@@ -1,18 +1,22 @@
 <div class="place-status-container {{ location_type }} {{#if status}} {{ status }} {{^}} new {{/if}}">
   <div class="place-status requested">
-    Status: <strong>Requested</strong> <small class="nobreak">(Not Inspected)</small>
+    Status: <strong>Requested</strong> <small class="nobreak"></small>
   </div>
   <div class="place-status rejected">
-    Status: <strong>Rejected</strong> <small class="nobreak">(Insufficient Sidewalk Width)</small>
+    Status: <strong>Rejected</strong> <small class="nobreak">
+    {{#if rejection_reason}}({{rejection_reason}}){{/if}}</small>
   </div>
   <div class="place-status approved">
-    Status: <strong>Approved</strong> <small class="nobreak">(Sent to Contractor)</small>
+    Status: <strong>Approved</strong> <small class="nobreak"></small>
+  </div>
+  <div class="place-status existing">
+    Status: <strong>Existing</strong> <small class="nobreak"></small>
   </div>
   <div class="place-status reported">
     Status: <strong>New Report</strong> <small class="nobreak"></small>
   </div>
   <div class="place-status resolved">
-    Status: <strong>Resolved</strong> <small class="nobreak">(Tagged for Removal)</small>
+    Status: <strong>Resolved</strong> <small class="nobreak"></small>
   </div>
 </div>
 
@@ -62,9 +66,16 @@
   {{#each_place_item "submitter_name" "name" "location_type"}}
   <div class="place-item place-item-{{ name }}">
     <span class="place-label place-label-{{ name }}">{{ label }}</span>
-    <p class="place-value place-value-{{ name }}">{{ value }}</p>
+    <p class="place-value place-value-{{ name }}">{{nlToBr value }}</p>
   </div>
   {{/each_place_item }}
+
+  {{#if notes_public }}
+  <div class="place-item place-item-{{ name }}">
+    <span class="place-label place-label-{{ name }}"><strong>Staff Notes:</strong></span>
+    <p class="place-value place-value-{{ name }}">{{nlToBr notes_public }}</p>
+  </div>
+  {{/if}}
 </section>
 
 {{#if survey_config}}
