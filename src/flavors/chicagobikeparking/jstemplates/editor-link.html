@@ -1,0 +1,6 @@
+<!-- showing an edit link if you're logged in -->
+{{#is_authenticated}}
+  <div class="launch-editor user-{{current_user "username"}}">
+    <p><a href="http://editor.chicagocompletestreets.org/#bike-parking/{{ id }}" target="_blank">Edit this request ({{ id }})</a></p>
+  </div>
+{{/is_authenticated}}

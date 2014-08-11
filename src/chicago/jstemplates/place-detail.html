@@ -1,11 +1,6 @@
-<!-- showing an edit link if you're logged in -->
-{{#is_authenticated}}
-  <div class="launch-editor user-{{current_user "name"}}">
-    <p><a href="http://editor.chicagocompletestreets.org/#abandoned-bikes/{{ id }}" target="_blank">Edit this location ({{ id }})</a></p>
-  </div>
-{{/is_authenticated}}
-    
-<div class="place-status-container {{ location_type }} {{#if status}} {{ status }} {{^}} new {{/if}}">
+{{> editor-link }}
+
+  <div class="place-status-container {{ location_type }} {{#if status}} {{ status }} {{^}} new {{/if}}">
   <div class="place-status requested">
     Status: <strong>Requested</strong> <small class="nobreak"></small>
   </div>
