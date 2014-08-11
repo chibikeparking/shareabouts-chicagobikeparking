@@ -433,6 +433,18 @@ a.shareabouts-logo:hover {
 }
 
 
+/* Show an edit link only if you're the page manager 
+---------------------------------------- */
+
+.launch-editor {
+  display: none;
+}
+
+.user-chicagobikes {
+  display: block;
+}
+
+
 /* =Media Queries
 -------------------------------------------------------------- */
 
