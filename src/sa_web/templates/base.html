@@ -3,6 +3,7 @@
 {% load i18n %}
 {% load shareabouts_utils %}
 {% load url from future %}
+{% get_current_language as LANGUAGE_CODE %}
 
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
@@ -55,7 +56,7 @@
   <![endif]-->
 
 </head>
-<body>
+<body class="{% if config.map.geocoding_enabled %} geocoding-enabled{% endif %}">
 
   <header id="site-header" class="clearfix{% if pages_config %} has-pages{% endif %}">
     <h1 id="site-title">{% block site-title %}{% endblock %}</h1>
@@ -69,27 +70,7 @@
     {% endif %}
 
     {% if config.languages %}
-    <div id="language-picker">
-      <nav class="access" role="article">
-        <ul class="menu">
-          <li class="menu-item">
-            {% get_language_info for LANGUAGE_CODE as language %}
-            <a class="current-language {{ LANGUAGE_CODE }} btn btn-block">{{ language.name_local }} ⌄</a>
-
-            <form action="{% url 'set_language' %}" method="post">
-              {% csrf_token %}
-              <ul class="menu">
-                {% for language in config.languages %}
-                <li class="menu-item">
-                  <button type="submit" name="language" value="{{ language.code }}" class="{{ language.code }} btn btn-block">{{ language.label }}</button>
-                </li>
-                {% endfor %}
-              </ul>
-            </form>
-          </li>
-        </ul>
-      </nav>
-    </div> <!-- .language-picker -->
+      {% include 'language_picker.html' %}
     {% endif %}
 
   </header>
@@ -151,7 +132,7 @@
   <script src="{{settings.COMPRESS_URL}}libs/backbone.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/backbone.marionette.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/handlebars-1.0.0.js"></script>
-  <script src="{{settings.COMPRESS_URL}}libs/moment.min.js"></script>
+  <script src="{{settings.COMPRESS_URL}}libs/moment-with-locales.min.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/json2.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/leaflet.argo.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/binaryajax.js"></script>
@@ -161,6 +142,7 @@
   <script src="{{settings.COMPRESS_URL}}libs/spin.min.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/gatekeeper.js"></script>
   <script src="{{settings.COMPRESS_URL}}libs/swag.min.js"></script>
+  <script src="{{settings.COMPRESS_URL}}libs/jquery.scrollTo.js"></script>
 
   <script src="{{settings.COMPRESS_URL}}js/utils.js"></script>
   <script src="{{settings.COMPRESS_URL}}js/template-helpers.js"></script>
@@ -169,6 +151,8 @@
   {% endcompress %}
 
   <script>
+    moment.locale('{{LANGUAGE_CODE}}');
+
     $(function() {
       // Check official browser support.
       var userAgent = {{ user_agent_json|safe }};
@@ -237,8 +221,6 @@
   {% handlebarsjs 'pages/*' precompile %}
 
   <script type="text/javascript">
-  // moment.lang({{locale}});
-
   (function(S, $){
     // Boostrapping the place types and their icons
     S.Config = {
