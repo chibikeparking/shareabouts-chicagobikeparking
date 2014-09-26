@@ -72,7 +72,7 @@ var placeFormView_setLocation = Shareabouts.PlaceFormView.prototype.setLocation;
 Shareabouts.PlaceFormView.prototype.setLocation = function(locationData) {
   placeFormView_setLocation.call(this, locationData);
 
-  var $placeNameField = this.$('[name="name"]'),
+  var $placeNameField = this.$('[name="user_token"]'),
       $approxAddress = $placeNameField.next();
 
   if ($approxAddress.length === 0) {
