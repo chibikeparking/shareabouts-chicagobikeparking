@@ -1,3 +1,4 @@
+{{^is target.status 'Rejected'}}
 {{#is target_type 'support' }}
   {{#if target.submitter}}
     <li class="activity-item clearfix">
@@ -44,4 +45,5 @@
     {{/if }}
     {{/_}}</a>
   </li>
+{{/is}}
 {{/is}}
