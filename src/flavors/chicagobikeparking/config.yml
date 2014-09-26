@@ -137,15 +137,19 @@ place:
     - prompt: _(Your Name)
       type: text
       name: submitter_name
-      optional: true
+      sticky: true
+      optional: false
       attrs:
         - key: placeholder
           value: _(Name)
         - key: size
           value: 30
+        - key: required
+          value: true
     - prompt: _(Your Email)
       type: text
       name: private-submitter_email
+      sticky: true
       optional: true
       attrs:
         - key: placeholder
@@ -155,12 +159,14 @@ place:
     - prompt: _(Location Name)
       type: text
       name: name
-      optional: true
+      optional: false
       attrs:
         - key: placeholder
           value: _(Location Name)
         - key: size
           value: 30
+        - key: required
+          value: true
     - prompt: _(Description)
       type: textarea
       name: description
