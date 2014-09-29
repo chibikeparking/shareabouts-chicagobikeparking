@@ -20,7 +20,7 @@
   DarkGray        #A9A9A9
   Light Gray      #E3E3E3
 
-  Red             #F30000
+  Red             #df5656
 
   Green           #8bc53f
 
@@ -100,7 +100,7 @@ textarea:focus {
 .form-submitted input:invalid,
 .form-submitted textarea:invalid,
 .form-submitted select:invalid {
-  outline: 2px solid #F30000;
+  outline: 2px solid #df5656;
 }
 
 
@@ -177,10 +177,10 @@ a.logout-btn {
 .drag-marker-instructions,
 .drag-marker-warning {
   background-color: #fff;
-  color: #F30000;
+  color: #df5656;
 }
 .drag-marker-warning {
-  background-color: #F30000;
+  background-color: #df5656;
   color: #fff;
   text-shadow: none;
 }
@@ -212,7 +212,7 @@ a.logout-btn {
 a.close-btn {
   font-family: "Helvetica Neue", Arial, Helvetica, serif; /* Careful changin' this! */
   background: #eee;
-  color: #F30000;
+  color: #df5656;
 }
 a.close-btn:hover {
   color: #AA0000;
@@ -301,7 +301,7 @@ a.close-btn:hover {
 }
 .place-status-container.bikeparking.Rejected .place-status.rejected {
   display: block;
-  background-color: #F30000;
+  background-color: #df5656;
 }
 .place-status-container.abandonedbike.Resolved .place-status.resolved {
   display: block;
@@ -395,11 +395,11 @@ input.geocode-address-field {
 }
 #geocode-address-bar .error {
   line-height: 1.875;
-  background-color: #F30000;
-  box-shadow: 2px 2px 0 #F30000, 2px -2px 0 #F30000, -2px 2px 0 #F30000, -2px -2px 0 #F30000;
+  background-color: #df5656;
+  box-shadow: 2px 2px 0 #df5656, 2px -2px 0 #df5656, -2px 2px 0 #df5656, -2px -2px 0 #df5656;
 }
 #geocode-address-bar .error + form {
-  box-shadow: 2px 2px 0 #F30000, 2px -2px 0 #F30000, -2px 2px 0 #F30000, -2px -2px 0 #F30000;
+  box-shadow: 2px 2px 0 #df5656, 2px -2px 0 #df5656, -2px 2px 0 #df5656, -2px -2px 0 #df5656;
 }
 #geocode-address-bar .error.is-hidden + form {
   box-shadow: none;
