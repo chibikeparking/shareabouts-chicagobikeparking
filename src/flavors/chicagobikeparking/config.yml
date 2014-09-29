@@ -33,7 +33,7 @@ map:
       lng: -87.6278
     zoom: 14
     minZoom: 10
-    maxZoom: 17
+    maxZoom: 18
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
       attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>'
@@ -227,6 +227,9 @@ survey:
     - prompt: _(Your Name)
       type: text
       name: submitter_name
+      attrs:
+        - key: required
+          value: true
 
 support:
   submission_type: support
