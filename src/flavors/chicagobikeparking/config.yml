@@ -32,7 +32,7 @@ map:
       lat: 41.8819
       lng: -87.6278
     zoom: 14
-    minZoom: 10
+    minZoom: 11
     maxZoom: 18
   layers:
     - url: http://{s}.tiles.mapbox.com/v3/openplans.map-dmar86ym/{z}/{x}/{y}.png
@@ -68,6 +68,34 @@ place_types:
           iconAnchor: [31, 81]
 
       - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Approved"'
+        icon:
+          iconUrl: /static/css/images/marker-dot-approved.png
+          iconSize: [18, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "ApprovedNotSent" && {{layer.focused}}'
+        icon:
+          iconUrl: /static/css/images/marker-bike-lock-approved.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [62, 81]
+          shadowSize: [95, 81]
+          iconAnchor: [31, 81]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "ApprovedNotSent"'
+        icon:
+          iconUrl: /static/css/images/marker-dot-approved.png
+          iconSize: [18, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "ApprovedSent" && {{layer.focused}}'
+        icon:
+          iconUrl: /static/css/images/marker-bike-lock-approved.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [62, 81]
+          shadowSize: [95, 81]
+          iconAnchor: [31, 81]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "ApprovedSent"'
         icon:
           iconUrl: /static/css/images/marker-dot-approved.png
           iconSize: [18, 18]
