@@ -59,6 +59,20 @@ place_types:
           iconSize: [10, 10]
           iconAnchor: [5, 5]
 
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Pending" && {{layer.focused}}'
+        icon:
+          iconUrl: /static/css/images/marker-bike-pending.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [62, 81]
+          shadowSize: [95, 81]
+          iconAnchor: [31, 81]
+
+      - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Pending"'
+        icon:
+          iconUrl: /static/css/images/marker-dot-pending.png
+          iconSize: [18, 18]
+          iconAnchor: [9, 9]
+
       - condition: '"{{location_type}}" === "bikeparking" && "{{status}}" === "Approved" && {{layer.focused}}'
         icon:
           iconUrl: /static/css/images/marker-bike-lock-approved.png
@@ -272,6 +286,9 @@ pages:
     slug: about
     name: overview
     start_page: true
+  - title: _(Abandoned Bike?)
+    slug: abandoned
+    name: abandoned  
 
 notifications:
   on_new_place: true

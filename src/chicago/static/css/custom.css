@@ -303,6 +303,10 @@ a.close-btn:hover {
   display: block;
   background-color: #8bc53f;
 }
+.place-status-container.bikeparking.Pending .place-status.pending {
+  display: block;
+  background-color: #d2aa00;
+}
 .place-status-container.bikeparking.Existing .place-status.existing {
   display: block;
   background-color: #51B3E1;
