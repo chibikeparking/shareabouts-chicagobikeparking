@@ -192,6 +192,9 @@ pages:
     slug: about
     name: overview
     start_page: true
+  - title: _(Need Bike Parking?)
+    slug: parking
+    name: parking  
 
 notifications:
   on_new_place: true
